@@ -5,7 +5,8 @@
     <title>JavaScript</title>
     <script type="text/javascript">
         "use strict";
-        let score = prompt("What is the score?") * 1;
+        const score = parseInt(prompt("What is the score?"));
+        console.log("Score: " + score);
         if (score >= 80) {
             console.log("Score is 80 or more");
         } else if (score >= 60) {
