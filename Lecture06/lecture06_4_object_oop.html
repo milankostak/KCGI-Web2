@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function Fruit(type, color) {
+            this.type = type;
+            this.color = color;
+            this.getInfo = function () {
+                return 'The color of ' + this.type + ' is ' + this.color + '.';
+            };
+        }
+
+        const lemon = new Fruit("lemon", "yellow");
+        console.log(lemon.getInfo());
+
+        const strawberry = new Fruit("strawberry", "red");
+        console.log(strawberry.getInfo());
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>

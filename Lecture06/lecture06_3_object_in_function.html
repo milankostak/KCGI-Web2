@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+        const dog = {
+            breed: "Shiba Inu",
+            height: 37,
+            printHeight: function () {
+                console.log(this.height);
+            },
+        };
+
+        function workWithDogObject(dogParam, amount, anotherRandomParam) {
+            console.log(dogParam.breed);
+            console.log(dogParam.printHeight());
+            console.log(amount);
+            console.log(anotherRandomParam);
+        }
+
+        workWithDogObject(dog, 41, [0, 1, 2]);
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>
