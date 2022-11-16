@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+        function getEmail() {
+            const email = document.querySelector("#emailInput").value;
+            document.getElementById("emailResult").innerText = email.toLowerCase();
+        }
+    </script>
+</head>
+
+<body>
+<form action="#">
+    <label for="emailInput">
+        Email: <input id="emailInput" type="email">
+    </label>
+    <br>
+    <br>
+    <input type="submit" value="Get email" onclick="getEmail()">
+</form>
+
+<br>
+<br>
+<div id="emailResult"></div>
+</body>
+</html>
