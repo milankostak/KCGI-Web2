@@ -11,7 +11,7 @@
             const score3 = document.querySelector("#score3").value;
 
             const totalScore = (parseInt(score1) + parseInt(score2) + parseInt(score3)) / 3.0;
-            document.getElementById("result").innerHTML = totalScore.toString();
+            document.getElementById("result").innerText = totalScore.toString();
         }
     </script>
 </head>
@@ -33,7 +33,7 @@
     </label>
     <br>
     <br>
-    <input type="submit" value="Get average" onclick="getAverageOfInputs()">
+    <input type="submit" value="Get average" onclick="getAverageOfInputs(); return false;">
 </form>
 
 <br>
