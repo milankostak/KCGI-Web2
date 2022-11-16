@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+        function getAverageOfInputs() {
+            const score1 = document.getElementById("score1").value;
+            const score2 = document.getElementById("score2").value;
+            const score3 = document.querySelector("#score3").value;
+
+            const totalScore = (parseInt(score1) + parseInt(score2) + parseInt(score3)) / 3.0;
+            document.getElementById("result").innerHTML = totalScore.toString();
+        }
+    </script>
+</head>
+
+<body>
+<form action="#">
+    <label for="score1">
+        Score 1: <input id="score1" type="number">
+    </label>
+    <br>
+    <br>
+    <label for="score2">
+        Score 2: <input id="score2" type="number">
+    </label>
+    <br>
+    <br>
+    <label for="score3">
+        Score 3: <input id="score3" type="number">
+    </label>
+    <br>
+    <br>
+    <input type="submit" value="Get average" onclick="getAverageOfInputs()">
+</form>
+
+<br>
+<br>
+<div>Result: <span id="result"></span></div>
+</body>
+</html>
