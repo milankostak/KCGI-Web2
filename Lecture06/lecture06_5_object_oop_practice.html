@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function Dog(breed, height) {
+            this.type = breed;
+            this.height = height;
+            this.printHeight = function () {
+                console.log(this.height);
+            };
+        }
+
+        const shibaInu = new Dog("Shiba Inu", "37");
+        shibaInu.printHeight();
+
+        const dalmatian = new Dog("Dalmatian", "60");
+        dalmatian.printHeight();
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>
