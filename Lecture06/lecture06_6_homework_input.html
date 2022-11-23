@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        // part 1
+
+        function Year(year) {
+            this.year = year;
+
+            this.isLeap = function () {
+                return (this.year % 4 === 0 && (this.year % 100 !== 0 || this.year % 400 === 0));
+            };
+
+            this.getNumberOfDays = function () {
+                return this.isLeap() ? 366 : 365;
+            };
+
+            this.getNumberOfSeconds = function () {
+                return this.getNumberOfDays() * 24 * 60 * 60;
+            };
+        }
+
+        console.log(new Year(1900).isLeap());
+        console.log(new Year(2000).isLeap());
+        console.log(new Year(2004).isLeap());
+        console.log(new Year(2100).isLeap());
+        console.log(new Year(2104).isLeap());
+
+        // part 2
+
+        const july2022 = {
+            month: 12,
+            year: 2022
+        };
+
+        const january2020 = {
+            month: 1,
+            year: 2022
+        };
+
+        // function getNumberOfMonths(date1, date2) {
+        //     return Math.abs(date1.year - date2.year) * 12 + Math.abs(date1.month - date2.month);
+        // }
+        function getNumberOfMonths(date1, date2) {
+            let monthsInYears = Math.abs(date1.year - date2.year) * 12;
+            let monthsInMonths;
+            if (date1.month < date2.month) {
+                monthsInYears -= 12;
+                monthsInMonths = (date1.month + 12) - date2.month;
+            } else {
+                monthsInMonths = date1.month - date2.month;
+            }
+            return monthsInYears + monthsInMonths;
+        }
+
+        const monthsCount = getNumberOfMonths(july2022, january2020);
+        console.log(monthsCount);
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>
