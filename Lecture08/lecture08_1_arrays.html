@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        const myArray = [1, 7, 11];
+        console.log(myArray); // Array(3) [ 1, 7, 11 ]
+        console.log(myArray[0]); // 1
+        console.log(myArray[1]); // 7
+        console.log(myArray[2]); // 11
+        console.log(myArray.length); // 3
+
+        const cities = [];
+        cities.push("Tokyo");
+        console.log(cities);
+        cities.push("Nagoya");
+        console.log(cities);
+        cities.push("Sapporo");
+        console.log(cities);
+        console.log(cities.pop());
+        console.log(cities);
+
+        const countries = [
+            ["Japan", "Tokyo"],
+            ["South Korea", "Seoul"],
+            ["Indonesia", "Jakarta"],
+        ];
+        console.log(countries);
+        console.log(countries[0][1]); // Tokyo
+        console.log(countries[1][0]); // South Korea
+        console.log(countries[2]); // [Indonesia, Jakarta]
+        console.log(countries.length); // 3
+        console.log(countries[1].length); // 2
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>

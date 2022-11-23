@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        let sum = 0;
+        for (let i = 0; i < 10; i++) {
+            sum = sum + i;
+        }
+        console.log(sum);
+
+        const numbers = [5, 4, 37, 9, 3, 15];
+        let max = numbers[0]; // can throw an exception when the array is empty
+        for (let i = 1; i < numbers.length; i++) {
+            if (max < numbers[i]) {
+                max = numbers[i];
+            }
+        }
+        console.log(max);
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>

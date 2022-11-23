@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        // example 1
+        function Fruit(type, color) {
+            this.type = type;
+            this.color = color;
+            this.getInfo = function () {
+                return 'The color of ' + this.type + ' is ' + this.color + '.';
+            };
+        }
+
+        const lemon = new Fruit("lemon", "yellow");
+        console.log(lemon.getInfo());
+
+        const strawberry = new Fruit("strawberry", "red");
+        console.log(strawberry.getInfo());
+
+        // example 2
+        function Car(model, passengersCount, color, horsePower, otherInfo) {
+            this.model = model; // string
+            this.passengersCount = passengersCount; // number
+            this.color = color; // string
+            this.horsePower = horsePower; // number
+            this.otherInfo = otherInfo; // object
+            this.speed = 0; // number
+
+            this.accelerate = function () {
+                this.speed = this.speed + (horsePower / 10.0);
+            };
+
+            this.decelerate = function () {
+                const newSpeed = this.speed - (horsePower / 10.0);
+                if (newSpeed < 0) this.speed = 0;
+                else this.speed = newSpeed;
+            };
+        }
+
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>
