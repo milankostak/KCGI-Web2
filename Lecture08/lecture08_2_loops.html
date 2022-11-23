@@ -13,7 +13,7 @@
         console.log(sum);
 
         const numbers = [5, 4, 37, 9, 3, 15];
-        let max = numbers[0]; // can throw an exception when the array is empty
+        let max = numbers[0]; // can throw an exception when the array is empty - you should check for that
         for (let i = 1; i < numbers.length; i++) {
             if (max < numbers[i]) {
                 max = numbers[i];
