@@ -11,14 +11,16 @@
             const selected = [];
             for (let i = 0; i < checkboxes.length; i++) {
                 if (checkboxes[i].checked) {
-                    selected.push(checkboxes[i].value)
+                    selected.push(checkboxes[i].value);
                 }
             }
-            if (selected.length === 0) {
-                document.querySelector("#selectedCities").innerHTML = "-";
-            } else {
+            if (selected.length > 0) {
                 document.querySelector("#selectedCities").innerHTML =
-                    selected.reduce((accumulator, currentValue) => accumulator + ", " + currentValue);
+                    selected.reduce(function (accumulator, currentValue) {
+                        return accumulator + ", " + currentValue;
+                    });
+            } else {
+                document.querySelector("#selectedCities").innerHTML = "<p>-</p>";
             }
         }
 
