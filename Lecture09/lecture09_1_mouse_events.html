@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleClick(e) {
+            console.log("clicked");
+            console.log(e);
+        }
+
+        function handleMouseover(e) {
+            console.log("mouseover");
+            console.log(e);
+        }
+
+        function handleMouseout(e) {
+            console.log("mouseout");
+            console.log(e);
+        }
+
+        function handleMousemove(e) {
+            console.log("mousemove");
+            console.log(e);
+        }
+
+        function handleOnload() {
+            document.getElementById("button").addEventListener("click", handleClick);
+            document.getElementById("button").addEventListener("mouseover", handleMouseover);
+            document.getElementById("button").addEventListener("mouseout", handleMouseout);
+            document.getElementById("button").addEventListener("mousemove", handleMousemove);
+        }
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<input type="submit" id="button" value="Button">
+</body>
+</html>

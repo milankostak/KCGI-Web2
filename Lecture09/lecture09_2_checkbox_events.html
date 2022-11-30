@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleClickOnCheckbox() {
+            const checkboxes = document.querySelectorAll("input");
+            const selected = [];
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    selected.push(checkboxes[i].value)
+                }
+            }
+            if (selected.length === 0) {
+                document.querySelector("#selectedCities").innerHTML = "-";
+            } else {
+                document.querySelector("#selectedCities").innerHTML =
+                    selected.reduce((accumulator, currentValue) => accumulator + ", " + currentValue);
+            }
+        }
+
+        function handleOnload() {
+            document.getElementById("cbTokyo").addEventListener("click", handleClickOnCheckbox);
+            document.getElementById("cbOsaka").addEventListener("click", handleClickOnCheckbox);
+            document.getElementById("cbSapporo").addEventListener("click", handleClickOnCheckbox);
+            document.getElementById("cbFukuoka").addEventListener("click", handleClickOnCheckbox);
+        }
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<p>
+    <label for="cbTokyo">
+        Tokyo <input id="cbTokyo" type="checkbox" value="Tokyo">
+    </label>
+</p>
+<p>
+    <label for="cbOsaka">
+        Osaka <input id="cbOsaka" type="checkbox" value="Osaka">
+    </label>
+</p>
+<p>
+    <label for="cbSapporo">
+        Sapporo <input id="cbSapporo" type="checkbox" value="Sapporo">
+    </label>
+</p>
+<p>
+    <label for="cbFukuoka">
+        Fukuoka <input id="cbFukuoka" type="checkbox" value="Fukuoka">
+    </label>
+</p>
+<p id="selectedCities">-</p>
+</body>
+</html>
