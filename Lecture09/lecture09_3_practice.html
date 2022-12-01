@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleClick() {
+            document.getElementById("random").innerHTML = Math.random().toString();
+        }
+
+        function handleOnload() {
+            document.getElementById("btRandom").addEventListener("click", handleClick);
+        }
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<p><input id="btRandom" type="button" value="Get random"></p>
+<p id="random">-</p>
+</body>
+</html>
