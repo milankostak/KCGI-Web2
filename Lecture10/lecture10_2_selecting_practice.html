@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - selecting</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleOnload() {
+            document.querySelector("p.bold");
+            // "p" part is saying that it will be a "p" element - paragraph
+            // generally referring to that tag name
+
+            // the "." is saying - whatever follows is a class
+            // and then "bold" is the class name
+
+            document.getElementsByTagName("span")[0];
+            document.getElementById("content");
+        }
+
+    </script>
+</head>
+
+<body onload="handleOnload();">
+
+<!-- select with querySelector -->
+<p class="bold">Paragraph</p>
+
+<!-- select with getElementsByTagName -->
+<span>Span</span>
+
+<!-- select with getElementById -->
+<div id="content">Div</div>
+
+</body>
+</html>

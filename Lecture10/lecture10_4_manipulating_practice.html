@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - manipulating</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleOnload() {
+            const span = document.createElement("span");
+            span.innerText = "great content";
+            document.querySelector("body").prepend(span);
+        }
+
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<p>xyz</p>
+</body>
+</html>

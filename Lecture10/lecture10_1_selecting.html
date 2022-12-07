@@ -2,15 +2,31 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>Object</title>
+    <title>DOM - selecting</title>
     <script type="text/javascript">
         "use strict";
 
         function handleOnload() {
-            document.getElementById("button");
-            document.getElementsByTagName("input");
-            document.getElementsByClassName("my_button");
-            document.querySelector("input#button.my_button");
+            const button1 = document.getElementById("button");
+            console.log(button1);
+
+            const button2 = document.getElementsByTagName("input")[0];
+            console.log(button2);
+
+            const button3 = document.getElementsByClassName("my_button")[0];
+            console.log(button3);
+
+            const button4 = document.querySelector("input#button.my_button");
+            console.log(button4);
+
+            // "input" part is saying that it will be an "input" element
+            // generally referring to that tag name
+
+            // the "#" is saying - whatever follows is an ID
+            // and then "button" is the ID
+
+            // the "." is saying - whatever follows is a class
+            // and then "my_button" is the class name
         }
 
     </script>
