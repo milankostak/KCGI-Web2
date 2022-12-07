@@ -7,11 +7,12 @@
         "use strict";
 
         function handleOnload() {
-            const div = document.createElement("div");
-            div.innerText = "New div element";
-            div.classList.add("my_div");
+            const label = document.createElement("label");
+            label.innerText = "New label element";
+            label.classList.add("my_label");
+            label.setAttribute("for", "button");
 
-            document.querySelector("body").append(div);
+            document.querySelector("body").append(label);
         }
 
     </script>
