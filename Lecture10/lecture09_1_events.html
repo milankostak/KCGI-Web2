@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleEvent(e) {
+            console.log(e);
+        }
+
+        function handleOnload() {
+            document.getElementById("button").addEventListener("keypress", handleEvent);
+            document.getElementById("button").addEventListener("keydown", handleEvent);
+            document.getElementById("button").addEventListener("keypress", handleEvent);
+
+            // document.addEventListener("scroll", handleEvent);
+
+            document.getElementById("button").addEventListener("focus", handleEvent);
+            document.getElementById("button").addEventListener("blur", handleEvent);
+        }
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<input type="text" id="button">
+</body>
+</html>
