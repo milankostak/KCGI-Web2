@@ -15,3 +15,15 @@
 
 ## Lecture 06
 [Objects, OOP](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture06)
+
+## Lecture 07
+[Forms](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture07)
+
+## Lecture 08
+[Recap of previous topics](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture08)
+
+## Lecture 09
+[Mouse events](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture09)
+
+## Lecture 10
+[DOM](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture10)
