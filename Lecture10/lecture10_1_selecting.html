@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleOnload() {
+            document.getElementById("button");
+            document.getElementsByTagName("input");
+            document.getElementsByClassName("my_button");
+            document.querySelector("input#button.my_button");
+        }
+
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<input type="submit" id="button" class="my_button" value="Button">
+</body>
+</html>

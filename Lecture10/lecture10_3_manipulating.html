@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleOnload() {
+            const div = document.createElement("div");
+            div.innerText = "New div element";
+            div.classList.add("my_div");
+
+            document.querySelector("body").append(div);
+        }
+
+    </script>
+</head>
+
+<body onload="handleOnload();">
+<input type="submit" id="button" class="my_button" value="Button">
+</body>
+</html>
