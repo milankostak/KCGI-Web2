@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers: Interval</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function printRandomNumber() {
+            console.log(Math.random());
+        }
+
+        const timerID = setInterval(printRandomNumber, 2500);
+        clearInterval(timerID);
+
+        let timerID2;
+
+        function setTimer() {
+            timerID2 = setInterval(printRandomNumber, 1000);
+            console.log("Timer ID:", timerID2);
+            document.querySelector("#button").disabled = true;
+        }
+
+        function cancelTimer() {
+            clearInterval(timerID2);
+            document.querySelector("#button").disabled = false;
+        }
+
+    </script>
+</head>
+
+<body>
+<button id="button" onclick="setTimer()">Set timer</button>
+<button onclick="cancelTimer()">Cancel timer</button>
+</body>
+</html>

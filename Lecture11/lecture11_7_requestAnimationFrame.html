@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers: request animation frame</title>
+    <script type="text/javascript">
+        "use strict";
+
+        // taken from https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+
+        let start;
+        let done = false;
+        let element;
+
+        function step(timestamp) {
+            if (start === undefined) {
+                start = timestamp;
+            }
+            const elapsed = timestamp - start;
+
+            // Math.min() is used here to make sure the element stops at exactly 500px
+            const count = Math.min(0.1 * elapsed, 500);
+            element.style.transform = `translateX(${count}px)`;
+            if (count === 500) done = true;
+
+            if (elapsed < 5000) { // Stop the animation after 5 seconds
+                if (!done) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+        }
+
+        function handleOnload() {
+            element = document.getElementById("main_element");
+            window.requestAnimationFrame(step);
+        }
+
+    </script>
+</head>
+
+<body onload="handleOnload()">
+<p id="main_element">Some content</p>
+</body>
+</html>

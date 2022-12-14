@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers: Timeout</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function printNumber() {
+            console.log("1");
+        }
+        setTimeout(printNumber, 3000);
+
+        setTimeout(function () {
+            console.log("2");
+        }, 4000);
+
+        setTimeout(() => {
+            console.log("3");
+        }, 5000);
+
+        setTimeout(console.log, 6000, "4");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers: Timeout</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function printRandomNumber() {
+            console.log(Math.random());
+        }
+
+        const timerID = setTimeout(printRandomNumber, 2500);
+        clearTimeout(timerID);
+
+        let timerID2;
+
+        function setTimer() {
+            timerID2 = setTimeout(printRandomNumber, 2000);
+            console.log("Timer ID:", timerID2);
+        }
+
+        function cancelTimer() {
+            clearTimeout(timerID2);
+            console.log("Cancelled timer:", timerID2);
+        }
+
+    </script>
+</head>
+
+<body>
+<button onclick="setTimer()">Set timer</button>
+<button onclick="cancelTimer()">Cancel timer</button>
+</body>
+</html>
