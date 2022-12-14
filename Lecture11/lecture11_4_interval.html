@@ -7,7 +7,15 @@
         "use strict";
 
         let counter = 0;
+        // let previousTime = new Date().getTime();
+        // let bufferOfExtraMs = 0;
         function printCounter() {
+            // const currentTime = new Date().getTime();
+            // console.log(currentTime - previousTime);
+            // bufferOfExtraMs += ((currentTime - previousTime) - 1000);
+            // console.log(bufferOfExtraMs);
+            // console.log("----")
+            // previousTime = currentTime;
             console.log(counter++);
         }
         setInterval(printCounter, 1000);

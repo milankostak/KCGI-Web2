@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers: Timeout</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function printRandomNumber() {
+            console.log(Math.random());
+        }
+        setTimeout(printRandomNumber, 2500);
+
+        setTimeout(function () {
+            console.log(Math.random());
+        }, 2500);
+
+        setTimeout(() => {
+            console.log(Math.random());
+        }, 2500);
+
+        setTimeout(console.log, 2500, Math.random());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

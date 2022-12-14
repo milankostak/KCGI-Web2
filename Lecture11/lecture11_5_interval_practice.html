@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers: Interval</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function printHello() {
+            console.log("hello");
+        }
+        setInterval(printHello, 800);
+
+        setInterval(function () {
+            console.log("hello");
+        }, 800);
+
+        setInterval(() => {
+            console.log("hello");
+        }, 800);
+
+        setInterval(console.log, 800, "hello");
+
+        //
+
+        setInterval(() => {
+            document.querySelector("body").append(document.createElement("p"));
+        }, 2000);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
