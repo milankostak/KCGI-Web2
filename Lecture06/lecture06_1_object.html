@@ -8,8 +8,11 @@
         const student = {
             studentName: "Tim",
             studentID: 6548,
+            getStudentNameUppercase: function () {
+                return this.studentName.toUpperCase();
+            },
             showStudentNameUppercase: function () {
-                console.log(this.studentName.toUpperCase());
+                console.log(this.getStudentNameUppercase());
             },
         };
 
