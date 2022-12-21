@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment #4</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleOnload() {
+            const paragraphElement = document.createElement("p");
+            paragraphElement.innerText = "User form";
+            document.querySelector("body").append(paragraphElement);
+
+            const formElement = document.createElement("form");
+            formElement.setAttribute("action", "/submit");
+            formElement.setAttribute("method", "post");
+            document.querySelector("body").append(formElement);
+
+            const labelUsername = document.createElement("label");
+            labelUsername.setAttribute("for", "username");
+            formElement.append(labelUsername);
+
+            const spanUsername = document.createElement("span");
+            spanUsername.innerText = "Username ";
+            labelUsername.append(spanUsername);
+
+            const inputUsername = document.createElement("input");
+            inputUsername.type = "text";
+            inputUsername.name = "username";
+            inputUsername.id = "username";
+            labelUsername.append(inputUsername);
+
+            formElement.append(document.createElement("br"));
+
+            const labelPassword = document.createElement("label");
+            labelPassword.setAttribute("for", "password");
+            formElement.append(labelPassword);
+
+            const spanPassword = document.createElement("span");
+            spanPassword.innerText = "Password ";
+            labelPassword.append(spanPassword);
+
+            const inputPassword = document.createElement("input");
+            inputPassword.type = "password";
+            inputPassword.name = "password";
+            inputPassword.id = "password";
+            labelPassword.append(inputPassword);
+        }
+
+    </script>
+</head>
+
+<body onload="handleOnload();">
+
+</body>
+</html>
