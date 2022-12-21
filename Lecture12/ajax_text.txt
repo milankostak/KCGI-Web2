@@ -1,0 +1,1 @@
+Ajax is a set of web techniques using technologies on the client-side to create asynchronous web applications.

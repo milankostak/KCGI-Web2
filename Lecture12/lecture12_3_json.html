@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+        const student1 = {
+            studentName: "Tim",
+            studentID: 6548,
+            enrolled: true,
+            courses: ["Web Programming 2", "Machine Learning"],
+        };
+
+        console.log(student1);
+        console.log(JSON.stringify(student1));
+
+        const student2 = JSON.parse("{\"studentName\":\"Jack\",\"studentID\":1763,\"enrolled\":false,\"courses\":[\"Web Programming 3\",\"Intro to algorithms\"]}");
+        console.log(student2);
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>

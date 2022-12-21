@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        "use strict";
+
+        // !!!!!
+        // These examples work only if running on localhost server (or other server)
+        // They do NOT work when running directly from the file system of your device.
+        // !!!!!
+
+        const sendRequestXHR = (path, callback) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", path);
+
+            xhr.onreadystatechange = () => {
+                // readyState 4 means the request is done
+                const DONE = 4;
+                // status 200 is a successful return
+                const OK = 200;
+                if (xhr.readyState === DONE) {
+                    if (xhr.status === OK) {
+                        callback(xhr.responseText);
+                    } else {
+                        console.log("Error: " + xhr.status);
+                    }
+                }
+            };
+
+            xhr.send(null);
+        };
+
+        const sendRequestFetchText = (path, callback) => {
+            fetch(path)
+                .then(response => response.text())
+                .then(json => callback(json))
+                .catch(error => console.log("Error: " + error));
+        };
+
+        sendRequestXHR("ajax_text.txt", console.log);
+        sendRequestFetchText("ajax_text.txt", console.log);
+
+        const sendRequestFetchJson = (path, callback) => {
+            fetch(path)
+                .then(response => response.json())
+                .then(json => callback(json))
+                .catch(error => console.log("Error: " + error));
+        };
+
+        sendRequestFetchJson("ajax_json.txt", console.log);
+
+    </script>
+</head>
+
+<body>
+Some content
+</body>
+</html>
