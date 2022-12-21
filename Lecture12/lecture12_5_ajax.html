@@ -11,15 +11,16 @@
         // They do NOT work when running directly from the file system of your device.
         // !!!!!
 
-        const sendRequestXHR = (path, callback) => {
+        const sendRequestXHR = function (path, callback) {
             const xhr = new XMLHttpRequest();
             xhr.open("GET", path);
 
-            xhr.onreadystatechange = () => {
+            xhr.onreadystatechange = function () {
                 // readyState 4 means the request is done
                 const DONE = 4;
                 // status 200 is a successful return
                 const OK = 200;
+                // console.log(xhr.readyState);
                 if (xhr.readyState === DONE) {
                     if (xhr.status === OK) {
                         callback(xhr.responseText);
@@ -35,14 +36,18 @@
         const sendRequestFetchText = (path, callback) => {
             fetch(path)
                 .then(response => response.text())
-                .then(json => callback(json))
+                .then(text => callback(text))
                 .catch(error => console.log("Error: " + error));
         };
 
         sendRequestXHR("ajax_text.txt", console.log);
         sendRequestFetchText("ajax_text.txt", console.log);
 
-        const sendRequestFetchJson = (path, callback) => {
+        // sendRequestXHR("ajax_text.txt", function (result) {
+        //     document.querySelector("body").innerText = result;
+        // });
+
+        const sendRequestFetchJson = function (path, callback) {
             fetch(path)
                 .then(response => response.json())
                 .then(json => callback(json))
