@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse events</title>
+    <script type="text/javascript">
+        "use strict";
+
+        function handleSubmission() {
+            const input = document.querySelector("input#input").value
+            const regex = /^[A-Z]a?p.[n-z]+$/;
+            const ok = regex.test(input);
+            const not = ok ? "" : "NOT "
+            document.querySelector("p#result").innerText = "String '" + input + "' does " + not + "match."
+        }
+    </script>
+</head>
+
+<body>
+<p>/^[A-Z]a?p.[n-z]+$/</p>
+<input type="text" id="input">
+<input type="submit" id="button" value="Check" onclick="handleSubmission(); return false;">
+<p id="result"></p>
+</body>
+</html>
