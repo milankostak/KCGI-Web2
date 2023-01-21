@@ -27,3 +27,12 @@
 
 ## Lecture 10
 [DOM](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture10)
+
+## Lecture 11
+[Timers](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture11)
+
+## Lecture 12
+[JSON and Ajax](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture12)
+
+## Lecture 13
+[Regular expressions](https://github.com/milankostak/KCGI-Web2/tree/master/Lecture13)
